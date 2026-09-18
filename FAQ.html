@@ -3,56 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FAQ - Tech Jobs Connect</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #d9efff, #5aa9e6, #1261a0);
+            color: #173b63;
+        }
+
+        /* HEADER */
+        header {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 6%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        header h1 {
+            color: #07529a;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #173b63;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #0878d1;
+        }
+
+        nav a.active {
+            color: #0878d1;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 65px 20px 100px;
+            background: linear-gradient(135deg, #07529a, #0878d1);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin: 0 0 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: -60px auto 60px;
+        }
+
+        .faq-container {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-container h2 {
+            text-align: center;
+            color: #07529a;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* FAQ QUESTIONS */
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 5px solid #0878d1;
+            background: #f4f9ff;
+            border-radius: 8px;
+        }
+
+        .faq-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #07529a;
+            font-size: 19px;
+        }
+
+        .faq-item p {
+            margin: 0;
+            line-height: 1.6;
+            color: #365a7d;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #082f55;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .faq-container {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-     <body style="background-color: grey;"></body>
+
+    <div class="logo">
+        <img src="images/LOGO.png" alt="Tech Jobs Connect Logo">
+    </div>
+
     <h1>Tech Jobs Connect</h1>
+
+    <nav>
+        <a href="home page.html">Home</a>
+    <a href="job listings.html">Jobs</a>
+    <a href="search and filter.html">Search Jobs</a>
+    <a href="career tips.html">Career Tips</a>
+    <a href="about-us.html" class="active">About Us</a>
+    <a href="form.html">Contact Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="employer registration.html">Employers</a>
+    <a href="job details.html">Job Details</a>
+    <a href="job seeker registration.html">Job Seeker Registration</a>S
+    </nav>
+
 </header>
 
-<main>
+<section class="hero">
     <h2>Frequently Asked Questions</h2>
+    <p>Find answers to common questions about Tech Jobs Connect.</p>
+</section>
 
-    <section class="faq">
-        <h3>How do I register as a job seeker?</h3>
-        <p>
-            Select the Job Seeker Registration option and complete
-            the registration form.
-        </p>
+<main>
 
-        <h3>How do I apply for a job?</h3>
-        <p>
-            Open the job listing, read the job requirements and click
-            the Apply Now button.
-        </p>
+    <div class="faq-container">
 
-        <h3>Can I upload my CV?</h3>
-        <p>
-            Yes. Job seekers can upload their CV when creating their
-            profile.
-        </p>
+        <h2>Frequently Asked Questions</h2>
 
-        <h3>How can a company advertise a vacancy?</h3>
-        <p>
-            Companies must register as employers before they can
-            advertise available positions.
-        </p>
+        <section class="faq">
 
-        <h3>Is registration free?</h3>
-        <p>
-            Yes. Registration on Tech Jobs Connect is free for job
-            seekers and employers.
-        </p>
+            <div class="faq-item">
+                <h3>How do I register as a job seeker?</h3>
+                <p>
+                    Select the Job Seeker Registration option and complete
+                    the registration form.
+                </p>
+            </div>
 
-        <h3>Can I apply for more than one job?</h3>
-        <p>
-            Yes. Registered job seekers can apply for multiple
-            suitable vacancies.
-        </p>
-    </section>
+            <div class="faq-item">
+                <h3>How do I apply for a job?</h3>
+                <p>
+                    Open the job listing, read the job requirements and click
+                    the Apply Now button.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I upload my CV?</h3>
+                <p>
+                    Yes. Job seekers can upload their CV when creating their
+                    profile.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How can a company advertise a vacancy?</h3>
+                <p>
+                    Companies must register as employers before they can
+                    advertise available positions.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is registration free?</h3>
+                <p>
+                    Yes. Registration on Tech Jobs Connect is free for job
+                    seekers and employers.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I apply for more than one job?</h3>
+                <p>
+                    Yes. Registered job seekers can apply for multiple
+                    suitable vacancies.
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+
 </main>
 
 <footer>

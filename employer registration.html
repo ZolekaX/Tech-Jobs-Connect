@@ -1,50 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Employer Registration - Tech Jobs Connect</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #d9efff,
+                #5aa9e6,
+                #1261a0
+            );
+
+            color: #173b63;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 10px 6%;
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* LOGO */
+
+        .logo img {
+            width: 240px;
+
+            height: auto;
+
+            display: block;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+
+            color: #173b63;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            padding: 10px 5px;
+        }
+
+
+        nav a:hover {
+            color: #0878d1;
+        }
+
+
+        nav a.active {
+            background: #0878d1;
+
+            color: white;
+
+            padding: 10px 15px;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            text-align: center;
+
+            color: white;
+
+            padding: 60px 20px 80px;
+
+            background: linear-gradient(
+                135deg,
+                #07529a,
+                #0878d1
+            );
+        }
+
+
+        .hero h1 {
+            font-size: 42px;
+
+            margin: 0 0 15px;
+        }
+
+
+        .hero p {
+            font-size: 18px;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            width: 90%;
+
+            max-width: 900px;
+
+            margin: -50px auto 70px;
+
+            position: relative;
+        }
+
+
+        /* =========================
+           FORM CONTAINER
+        ========================= */
+
+        .form-container {
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.20);
+        }
+
+
+        .form-container h2 {
+            text-align: center;
+
+            font-size: 30px;
+
+            color: #123d70;
+
+            margin-top: 0;
+
+            margin-bottom: 10px;
+        }
+
+
+        .intro {
+            text-align: center;
+
+            color: #777;
+
+            margin-bottom: 35px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FORM GROUP
+        ========================= */
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+
+        label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+            color: #173b63;
+        }
+
+
+        /* =========================
+           INPUTS
+        ========================= */
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #cbd9e8;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            outline: none;
+
+            background: #f8fbff;
+        }
+
+
+        input:focus,
+        textarea:focus {
+            border-color: #0878d1;
+
+            box-shadow:
+                0 0 0 3px rgba(8, 120, 209, 0.15);
+
+            background: white;
+        }
+
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        button {
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #07529a;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        button:hover {
+            background: #0878d1;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #082f55;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        footer h3 {
+            font-size: 22px;
+
+            margin-top: 0;
+        }
+
+
+        footer p {
+            margin: 8px 0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+
+                padding: 15px;
+            }
+
+
+            .logo img {
+                width: 200px;
+            }
+
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 10px;
+            }
+
+
+            nav a {
+                font-size: 13px;
+            }
+
+
+            .hero {
+                padding: 50px 20px 70px;
+            }
+
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+
+            .hero p {
+                font-size: 16px;
+            }
+
+
+            main {
+                width: 94%;
+            }
+
+
+            .form-container {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-<header>
-     <body style="background-color: grey;"></body>
-    <img src="images/LOGO.png " width="200px" height="300px">
-    <h1>Tech Jobs Connect</h1>
-</header>
 
-<main>
-    <h2>Employer Registration</h2>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-    <form action="#" method="post">
+    <header>
 
-        <label>Company Name:</label>
-        <input type="text" name="company" required>
+        <div class="logo">
 
-        <label>Contact Person:</label>
-        <input type="text" name="contact" required>
+            <img
+                src="images/LOGO.png"
+                alt="Tech Jobs Connect Logo"
+            >
 
-        <label>Email Address:</label>
-        <input type="email" name="email" required>
+        </div>
 
-        <label>Phone Number:</label>
-        <input type="tel" name="phone">
 
-        <label>Company Address:</label>
-        <textarea name="address"></textarea>
+        <nav>
+         <a href="home page.html">Home</a>
+    <a href="job listings.html">Jobs</a>
+    <a href="search and filter.html">Search Jobs</a>
+    <a href="career tips.html">Career Tips</a>
+    <a href="about-us.html" class="active">About Us</a>
+    <a href="form.html">Contact Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="employer registration.html">Employers</a>
+    <a href="job details.html">Job Details</a>
+    <a href="job seeker registration.html">Job Seeker Registration</a>
+        </nav>
 
-        <label>Password:</label>
-        <input type="password" name="password" required>
+    </header>
 
-        <button type="submit">Register Company</button>
 
-    </form>
-</main>
 
-<footer>
-    <p>&copy; 2026 Tech Jobs Connect. All Rights Reserved.</p>
-</footer>
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <h1>
+            Employer Registration
+        </h1>
+
+        <p>
+            Connect your company with talented technology professionals.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main>
+
+        <div class="form-container">
+
+            <h2>
+                Register Your Company
+            </h2>
+
+
+            <p class="intro">
+                Create an employer account and connect
+                with skilled technology professionals.
+            </p>
+
+
+            <!-- FORM -->
+
+            <form action="#" method="post">
+
+
+                <!-- COMPANY NAME -->
+
+                <div class="form-group">
+
+                    <label for="company">
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        placeholder="Enter company name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CONTACT PERSON -->
+
+                <div class="form-group">
+
+                    <label for="contact">
+                        Contact Person
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact"
+                        name="contact"
+                        placeholder="Enter contact person's name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter company email address"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter phone number"
+                    >
+
+                </div>
+
+
+
+                <!-- ADDRESS -->
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Company Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="4"
+                        placeholder="Enter company address"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button type="submit">
+                    Register Company
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            Tech Jobs Connect
+        </h3>
+
+        <p>
+            Connecting Talent with Tech Opportunities.
+        </p>
+
+        <p>
+            &copy; 2026 Tech Jobs Connect.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>

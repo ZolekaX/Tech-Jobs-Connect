@@ -5,13 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Career Tips - Tech Jobs Connect</title>
+    <title>About Us - Tech Jobs Connect</title>
 
     <style>
-
-        /* =========================
-           GENERAL
-        ========================= */
 
         * {
             box-sizing: border-box;
@@ -33,22 +29,19 @@
 
 
         /* =========================
-           HEADER
+           NAVIGATION
         ========================= */
 
         header {
             background: white;
 
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
 
             padding: 10px 6%;
 
-            box-shadow:
-                0 3px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
         }
 
 
@@ -56,22 +49,16 @@
 
         .logo img {
             width: 240px;
-
             height: auto;
-
             display: block;
         }
 
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* NAVIGATION LINKS */
 
         nav {
             display: flex;
-
             align-items: center;
-
             gap: 20px;
         }
 
@@ -148,11 +135,9 @@
         }
 
 
-        /* =========================
-           CAREER CONTAINER
-        ========================= */
+        /* ABOUT CONTAINER */
 
-        .career-container {
+        .about-container {
             background: white;
 
             padding: 40px;
@@ -164,7 +149,7 @@
         }
 
 
-        .career-container h2 {
+        .about-container h2 {
             text-align: center;
 
             font-size: 30px;
@@ -189,10 +174,10 @@
 
 
         /* =========================
-           CAREER TIPS
+           ABOUT SECTIONS
         ========================= */
 
-        .tip {
+        .about-section {
             display: flex;
 
             align-items: flex-start;
@@ -200,25 +185,17 @@
             gap: 25px;
 
             margin-bottom: 30px;
-
-            padding-bottom: 25px;
-
-            border-bottom: 1px solid #d9e7f2;
         }
 
 
-        .tip:last-child {
-            border-bottom: none;
-
+        .about-section:last-child {
             margin-bottom: 0;
-
-            padding-bottom: 0;
         }
 
 
-        /* TIP ICON */
+        /* ICON */
 
-        .tip-icon {
+        .about-icon {
             min-width: 70px;
 
             width: 70px;
@@ -239,14 +216,14 @@
         }
 
 
-        /* TIP TEXT */
+        /* TEXT */
 
-        .tip-text {
+        .about-text {
             flex: 1;
         }
 
 
-        .tip h3 {
+        .about-text h3 {
             color: #07529a;
 
             font-size: 22px;
@@ -257,14 +234,14 @@
         }
 
 
-        .tip p {
+        .about-text p {
             color: #315b82;
-
-            font-size: 16px;
 
             line-height: 1.7;
 
-            margin: 0;
+            font-size: 16px;
+
+            margin-top: 0;
         }
 
 
@@ -349,17 +326,17 @@
             }
 
 
-            .career-container {
+            .about-container {
                 padding: 25px;
             }
 
 
-            .tip {
+            .about-section {
                 gap: 15px;
             }
 
 
-            .tip-icon {
+            .about-icon {
                 min-width: 55px;
 
                 width: 55px;
@@ -370,12 +347,12 @@
             }
 
 
-            .tip h3 {
+            .about-text h3 {
                 font-size: 19px;
             }
 
 
-            .tip p {
+            .about-text p {
                 font-size: 15px;
             }
 
@@ -390,7 +367,7 @@
 
 
     <!-- =========================
-         HEADER
+         HEADER / NAVIGATION
     ========================= -->
 
     <header>
@@ -405,8 +382,6 @@
         </div>
 
 
-        <!-- NAVIGATION -->
-
         <nav>
           <a href="home page.html">Home</a>
     <a href="job listings.html">Jobs</a>
@@ -416,7 +391,7 @@
     <a href="form.html">Contact Us</a>
     <a href="faq.html">FAQ</a>
     <a href="Gallery.html">Gallery</a>
-    <a href="employer registrationS.html">Employers</a>
+    <a href="employer registration.html">Employers</a>
     <a href="job details.html">Job Details</a>
     <a href="job seeker registration.html">Job Seeker Registration</a>
         </nav>
@@ -426,18 +401,18 @@
 
 
     <!-- =========================
-         HERO
+         HERO SECTION
     ========================= -->
 
     <section class="hero">
 
         <h1>
-            Career Tips
+            About Tech Jobs Connect
         </h1>
 
         <p>
-            Build your skills, improve your career,
-            and succeed in the technology industry.
+            Connecting talented people with opportunities
+            in the technology industry.
         </p>
 
     </section>
@@ -450,132 +425,129 @@
 
     <main>
 
-        <div class="career-container">
+        <div class="about-container">
 
             <h2>
-                Career Tips for Tech Professionals
+                About Tech Jobs Connect
             </h2>
 
 
             <p class="intro">
-                Helpful advice to prepare for technology
-                careers and improve your chances of finding
-                the right opportunity.
+                Learn more about who we are, what we do,
+                and how we help connect people with technology careers.
             </p>
 
 
 
-            <!-- CV WRITING -->
+            <!-- PURPOSE -->
 
-            <article class="tip">
+            <section class="about-section">
 
-                <div class="tip-icon">
-                    📄
+                <div class="about-icon">
+                    🎯
                 </div>
 
 
-                <div class="tip-text">
+                <div class="about-text">
 
                     <h3>
-                        CV Writing
+                        Our Purpose
                     </h3>
 
                     <p>
-                        Keep your CV clear and professional.
-                        Highlight your technical skills,
-                        education, experience and projects.
-                        Make sure your CV is easy to read and
-                        relevant to the position you are applying for.
+                        Tech Jobs Connect connects technology job
+                        seekers with companies looking for skilled
+                        IT professionals. Our platform makes it
+                        easier for job seekers to discover
+                        opportunities and for employers to find
+                        talented candidates.
                     </p>
 
                 </div>
 
-            </article>
+            </section>
 
 
 
-            <!-- INTERVIEW -->
+            <!-- MISSION -->
 
-            <article class="tip">
+            <section class="about-section">
 
-                <div class="tip-icon">
-                    💼
-                </div>
-
-
-                <div class="tip-text">
-
-                    <h3>
-                        Interview Preparation
-                    </h3>
-
-                    <p>
-                        Research the company, practise common
-                        interview questions and prepare examples
-                        of your technical skills. Be ready to
-                        explain your projects and experience.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- SKILLS -->
-
-            <article class="tip">
-
-                <div class="tip-icon">
-                    💻
-                </div>
-
-
-                <div class="tip-text">
-
-                    <h3>
-                        Skills Development
-                    </h3>
-
-                    <p>
-                        Keep learning new technologies and
-                        practise your skills by working on
-                        personal and academic projects.
-                        Online courses and certifications can
-                        also help you develop your career.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- STARTING CAREER -->
-
-            <article class="tip">
-
-                <div class="tip-icon">
+                <div class="about-icon">
                     🚀
                 </div>
 
 
-                <div class="tip-text">
+                <div class="about-text">
 
                     <h3>
-                        Starting a Career in IT
+                        Our Mission
                     </h3>
 
                     <p>
-                        Build a strong portfolio, gain practical
-                        experience and apply for internships,
-                        graduate programmes and entry-level
-                        technology positions.
+                        Our mission is to make technology job
+                        opportunities easier to find while helping
+                        employers connect with suitable candidates.
                     </p>
 
                 </div>
 
-            </article>
+            </section>
+
+
+
+            <!-- VISION -->
+
+            <section class="about-section">
+
+                <div class="about-icon">
+                    👁️
+                </div>
+
+
+                <div class="about-text">
+
+                    <h3>
+                        Our Vision
+                    </h3>
+
+                    <p>
+                        Our vision is to become a trusted platform
+                        for technology careers and employment
+                        opportunities.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- WHY CHOOSE US -->
+
+            <section class="about-section">
+
+                <div class="about-icon">
+                    👥
+                </div>
+
+
+                <div class="about-text">
+
+                    <h3>
+                        Why Choose Us
+                    </h3>
+
+                    <p>
+                        We bring together talented professionals
+                        and innovative companies in one place,
+                        creating more opportunities for everyone
+                        in the technology industry.
+                    </p>
+
+                </div>
+
+            </section>
 
 
         </div>

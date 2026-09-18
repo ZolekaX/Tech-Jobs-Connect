@@ -4,35 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Jobs - Tech Jobs Connect</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #d9efff, #5aa9e6, #1261a0);
+            color: #173b63;
+        }
+
+        /* HEADER */
+        header {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 6%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        header h1 {
+            color: #07529a;
+            font-size: 26px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #173b63;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0878d1;
+        }
+
+        nav a.active {
+            color: #0878d1;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #07529a, #0878d1);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 100px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin: 0 0 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: -60px auto 60px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        main h2 {
+            text-align: center;
+            color: #07529a;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        /* FORM */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #173b63;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #b8d4eb;
+            border-radius: 8px;
+            background-color: #f8fbff;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #0878d1;
+            box-shadow: 0 0 5px rgba(8, 120, 209, 0.3);
+        }
+
+        button {
+            background-color: #07529a;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0878d1;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #082f55;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            main {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-     <body style="background-color:grey;"></body>
-    <img src="images/LOGO.png " width="200px" height="300px">
+    <div class="logo">
+        <img src="images/LOGO.png" alt="Tech Jobs Connect Logo">
+    </div>
+
     <h1>Tech Jobs Connect</h1>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="job-listings.html">Jobs</a>
-        <a href="search-filter.html">Search</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact</a>
+         <a href="home page.html">Home</a>
+    <a href="job listings.html">Jobs</a>
+    <a href="search and filter.html">Search Jobs</a>
+    <a href="career tips.html">Career Tips</a>
+    <a href="about-us.html" class="active">About Us</a>
+    <a href="form.html">Contact Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="employer registration.html">Employers</a>
+    <a href="job details.html">Job Details</a>
+    <a href="job seeker registration.html">Job Seeker Registration</a>
     </nav>
 </header>
 
-<main>
+<section class="hero">
     <h2>Search and Filter Jobs</h2>
+    <p>Find technology jobs that match your skills and career goals.</p>
+</section>
+
+<main>
+
+    <h2>Find Your Perfect Job</h2>
 
     <form>
-        <label>Keywords:</label>
-        <input type="text" placeholder="e.g. Java Developer">
 
-        <label>Location:</label>
-        <input type="text" placeholder="e.g. Johannesburg">
+        <label for="keywords">Keywords:</label>
+        <input 
+            type="text" 
+            id="keywords"
+            placeholder="e.g. Java Developer"
+        >
 
-        <label>Job Category:</label>
-        <select>
+        <label for="location">Location:</label>
+        <input 
+            type="text" 
+            id="location"
+            placeholder="e.g. Johannesburg"
+        >
+
+        <label for="category">Job Category:</label>
+        <select id="category">
             <option>All Categories</option>
             <option>Software Development</option>
             <option>IT Support</option>
@@ -41,8 +240,8 @@
             <option>Web Development</option>
         </select>
 
-        <label>Experience Level:</label>
-        <select>
+        <label for="experience">Experience Level:</label>
+        <select id="experience">
             <option>All Levels</option>
             <option>Entry Level</option>
             <option>Junior</option>
@@ -50,8 +249,8 @@
             <option>Senior</option>
         </select>
 
-        <label>Employment Type:</label>
-        <select>
+        <label for="employment">Employment Type:</label>
+        <select id="employment">
             <option>All Types</option>
             <option>Full Time</option>
             <option>Part Time</option>
@@ -60,7 +259,9 @@
         </select>
 
         <button type="submit">Search Jobs</button>
+
     </form>
+
 </main>
 
 <footer>

@@ -1,60 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Job Details - Tech Jobs Connect</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #d9efff, #5aa9e6, #1261a0);
+            color: #173b63;
+        }
+
+        /* HEADER */
+
+        header {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 6%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        header h1 {
+            color: #07529a;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #173b63;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #0878d1;
+        }
+
+        nav a.active {
+            color: #0878d1;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 65px 20px 100px;
+            background: linear-gradient(135deg, #07529a, #0878d1);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin: 0 0 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* MAIN */
+
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: -60px auto 60px;
+        }
+
+        /* JOB DETAILS CARD */
+
+        .job-details {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-details h2 {
+            color: #07529a;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .job-info {
+            background: #f4f9ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #0878d1;
+        }
+
+        .job-info p {
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+
+        .job-info strong {
+            color: #07529a;
+        }
+
+        /* HEADINGS */
+
+        .job-details h3 {
+            color: #07529a;
+            font-size: 23px;
+            margin-top: 30px;
+        }
+
+        /* TEXT */
+
+        .job-details p {
+            line-height: 1.7;
+            color: #4c6880;
+        }
+
+        /* LIST */
+
+        .job-details ul {
+            line-height: 1.8;
+            color: #4c6880;
+            padding-left: 25px;
+        }
+
+        .job-details li {
+            margin-bottom: 8px;
+        }
+
+        /* BUTTON */
+
+        .button {
+            display: inline-block;
+            background: #07529a;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #0878d1;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #082f55;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .job-details {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-<header>
-     <body style="background-color: grey;"></body>
-    <img src="images/LOGO.png " width="200px" height="300px">
-    <h1>Tech Jobs Connect</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="job-listings.html">Jobs</a>
-        <a href="search-filter.html">Search</a>
-        <a href="career-tips.html">Career Tips</a>
-    </nav>
-</header>
 
-<main>
-    <h2>Junior Software Developer</h2>
+    <!-- HEADER -->
 
-    <section class="job-details">
-        <p><strong>Company:</strong> Tech Solutions SA</p>
-        <p><strong>Location:</strong> Johannesburg, South Africa</p>
-        <p><strong>Salary:</strong> R18,000 - R25,000 per month</p>
-        <p><strong>Employment Type:</strong> Full Time</p>
-        <p><strong>Experience:</strong> 0 - 2 years</p>
-        <p><strong>Closing Date:</strong> 30 September 2026</p>
+    <header>
 
-        <h3>Job Description</h3>
+        <div class="logo">
+
+            <img src="images/LOGO.png"
+                 alt="Tech Jobs Connect Logo">
+
+        </div>
+
+        <h1>Tech Jobs Connect</h1>
+
+        <nav>
+          <a href="home page.html">Home</a>
+    <a href="job listings.html">Jobs</a>
+    <a href="search and filter.html">Search Jobs</a>
+    <a href="career tips.html">Career Tips</a>
+    <a href="about-us.html" class="active">About Us</a>
+    <a href="form.html">Contact Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="employer registration.html">Employers</a>
+    <a href="job details.html">Job Details</a>
+    <a href="job seeker registration.html">Job Seeker Registration</a>
+            
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h2>Junior Software Developer</h2>
+
         <p>
-            We are looking for a motivated Junior Software Developer
-            to join our development team and assist with designing,
-            developing and testing software applications.
+            View the job details and apply for this opportunity.
         </p>
 
-        <h3>Requirements</h3>
-        <ul>
-            <li>Diploma or degree in Information Technology.</li>
-            <li>Basic knowledge of Java or another programming language.</li>
-            <li>Good problem-solving skills.</li>
-            <li>Good communication skills.</li>
-        </ul>
-
-        <a href="job-seeker-registration.html" class="button">
-            Apply Now
-        </a>
     </section>
-</main>
 
-<footer>
-    <p>&copy; 2026 Tech Jobs Connect. All Rights Reserved.</p>
-</footer>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="job-details">
+
+            <h2>Junior Software Developer</h2>
+
+
+            <!-- JOB INFORMATION -->
+
+            <div class="job-info">
+
+                <p>
+                    <strong>Company:</strong>
+                    Tech Solutions SA
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Johannesburg, South Africa
+                </p>
+
+                <p>
+                    <strong>Salary:</strong>
+                    R18,000 - R25,000 per month
+                </p>
+
+                <p>
+                    <strong>Employment Type:</strong>
+                    Full Time
+                </p>
+
+                <p>
+                    <strong>Experience:</strong>
+                    0 - 2 years
+                </p>
+
+                <p>
+                    <strong>Closing Date:</strong>
+                    30 September 2026
+                </p>
+
+            </div>
+
+
+            <!-- JOB DESCRIPTION -->
+
+            <h3>Job Description</h3>
+
+            <p>
+                We are looking for a motivated Junior Software Developer
+                to join our development team and assist with designing,
+                developing and testing software applications.
+            </p>
+
+
+            <!-- REQUIREMENTS -->
+
+            <h3>Requirements</h3>
+
+            <ul>
+
+                <li>
+                    Diploma or degree in Information Technology.
+                </li>
+
+                <li>
+                    Basic knowledge of Java or another programming language.
+                </li>
+
+                <li>
+                    Good problem-solving skills.
+                </li>
+
+                <li>
+                    Good communication skills.
+                </li>
+
+            </ul>
+
+
+            <!-- APPLY BUTTON -->
+
+            <a href="job-seeker-registration.html" class="button">
+                Apply Now
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Tech Jobs Connect. All Rights Reserved.
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>

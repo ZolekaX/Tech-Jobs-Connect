@@ -1,60 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Job Listings - Tech Jobs Connect</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #d9efff, #5aa9e6, #1261a0);
+            color: #173b63;
+        }
+
+        /* HEADER */
+
+        header {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 6%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        header h1 {
+            color: #07529a;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #173b63;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #0878d1;
+        }
+
+        nav a.active {
+            color: #0878d1;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 65px 20px 100px;
+            background: linear-gradient(135deg, #07529a, #0878d1);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin: 0 0 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* MAIN */
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: -60px auto 60px;
+        }
+
+        /* JOB LISTINGS CONTAINER */
+
+        .jobs-container {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .jobs-container h2 {
+            text-align: center;
+            color: #07529a;
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* JOB CARD */
+
+        .job-card {
+            background: #f4f9ff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #0878d1;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .job-card h3 {
+            color: #07529a;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .job-card p {
+            color: #4c6880;
+            line-height: 1.5;
+            margin: 8px 0;
+        }
+
+        .job-card strong {
+            color: #173b63;
+        }
+
+        /* BUTTON */
+
+        .button {
+            display: inline-block;
+            background: #07529a;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #0878d1;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #082f55;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .jobs-container {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-<header>
-     <body style="background-color: grey;"></body>
-    <img src="images/LOGO.png " width="200px" height="300px">
-    <h1>Tech Jobs Connect</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="job-listings.html">Jobs</a>
-        <a href="career-tips.html">Career Tips</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact</a>
-    </nav>
-</header>
 
-<main>
-    <h2>Available Technology Jobs</h2>
+    <!-- HEADER -->
 
-    <div class="job-card">
-        <h3>Junior Software Developer</h3>
-        <p><strong>Company:</strong> Tech Solutions SA</p>
-        <p><strong>Location:</strong> Johannesburg</p>
-        <p><strong>Salary:</strong> R18,000 - R25,000 per month</p>
-        <p><strong>Closing Date:</strong> 30 September 2026</p>
-        <a href="job-details.html" class="button">View Details</a>
-    </div>
+    <header>
 
-    <div class="job-card">
-        <h3>IT Support Technician</h3>
-        <p><strong>Company:</strong> Digital Systems</p>
-        <p><strong>Location:</strong> Cape Town</p>
-        <p><strong>Salary:</strong> R15,000 - R22,000 per month</p>
-        <p><strong>Closing Date:</strong> 25 September 2026</p>
-        <a href="job-details.html" class="button">View Details</a>
-    </div>
+        <div class="logo">
 
-    <div class="job-card">
-        <h3>Web Developer</h3>
-        <p><strong>Company:</strong> WebTech Africa</p>
-        <p><strong>Location:</strong> Pretoria</p>
-        <p><strong>Salary:</strong> R20,000 - R30,000 per month</p>
-        <p><strong>Closing Date:</strong> 15 October 2026</p>
-        <a href="job-details.html" class="button">View Details</a>
-    </div>
-</main>
+            <img src="images/LOGO.png"
+                 alt="Tech Jobs Connect Logo">
 
-<footer>
-    <p>&copy; 2026 Tech Jobs Connect. All Rights Reserved.</p>
-</footer>
+        </div>
+
+        <h1>Tech Jobs Connect</h1>
+
+        <nav>
+          <a href="home page.html">Home</a>
+    <a href="job listings.html">Jobs</a>
+    <a href="search and filter.html">Search Jobs</a>
+    <a href="career tips.html">Career Tips</a>
+    <a href="about-us.html" class="active">About Us</a>
+    <a href="form.html">Contact Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="employer registration.html">Employers</a>
+    <a href="job details.html">Job Details</a>
+    <a href="job seeker registration.html">Job Seeker Registration</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h2>Available Technology Jobs</h2>
+
+        <p>
+            Find your next opportunity in the technology industry.
+        </p>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <div class="jobs-container">
+
+            <h2>Available Technology Jobs</h2>
+
+
+            <!-- JOB 1 -->
+
+            <div class="job-card">
+
+                <h3>
+                    Junior Software Developer
+                </h3>
+
+                <p>
+                    <strong>Company:</strong>
+                    Tech Solutions SA
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Johannesburg
+                </p>
+
+                <p>
+                    <strong>Salary:</strong>
+                    R18,000 - R25,000 per month
+                </p>
+
+                <p>
+                    <strong>Closing Date:</strong>
+                    30 September 2026
+                </p>
+
+                <a href="job-details.html" class="button">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <!-- JOB 2 -->
+
+            <div class="job-card">
+
+                <h3>
+                    IT Support Technician
+                </h3>
+
+                <p>
+                    <strong>Company:</strong>
+                    Digital Systems
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Cape Town
+                </p>
+
+                <p>
+                    <strong>Salary:</strong>
+                    R15,000 - R22,000 per month
+                </p>
+
+                <p>
+                    <strong>Closing Date:</strong>
+                    25 September 2026
+                </p>
+
+                <a href="job-details.html" class="button">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <!-- JOB 3 -->
+
+            <div class="job-card">
+
+                <h3>
+                    Web Developer
+                </h3>
+
+                <p>
+                    <strong>Company:</strong>
+                    WebTech Africa
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Pretoria
+                </p>
+
+                <p>
+                    <strong>Salary:</strong>
+                    R20,000 - R30,000 per month
+                </p>
+
+                <p>
+                    <strong>Closing Date:</strong>
+                    15 October 2026
+                </p>
+
+                <a href="job-details.html" class="button">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Tech Jobs Connect. All Rights Reserved.
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>

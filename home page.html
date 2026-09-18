@@ -1,33 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home - Tech Jobs Connect</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #d9efff, #5aa9e6, #1261a0);
+            color: #173b63;
+        }
+
+        /* HEADER */
+
+        header {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 6%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        header h1 {
+            color: #07529a;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #173b63;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #0878d1;
+        }
+
+        nav a.active {
+            color: #0878d1;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #07529a, #0878d1);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* BUTTONS */
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: #07529a;
+            text-decoration: none;
+            padding: 14px 25px;
+            margin: 8px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #d9efff;
+            transform: translateY(-2px);
+        }
+
+        /* MAIN */
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        main section:not(.hero) {
+            background: white;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        main section h2 {
+            text-align: center;
+            color: #07529a;
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* FEATURES */
+
+        .features {
+            display: flex;
+            gap: 25px;
+        }
+
+        .feature {
+            flex: 1;
+            background: #f4f9ff;
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 5px solid #0878d1;
+            text-align: center;
+        }
+
+        .feature h3 {
+            color: #07529a;
+            margin-top: 0;
+        }
+
+        .feature p {
+            line-height: 1.6;
+            color: #4c6880;
+        }
+
+        .feature a {
+            color: #0878d1;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .feature a:hover {
+            text-decoration: underline;
+        }
+
+        /* FEATURED JOBS */
+
+        .job-card {
+            background: #f4f9ff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0878d1;
+            border-radius: 10px;
+        }
+
+        .job-card h3 {
+            color: #07529a;
+            margin-top: 0;
+        }
+
+        .job-card p {
+            color: #4c6880;
+        }
+
+        .job-card .button {
+            background: #07529a;
+            color: white;
+            margin-left: 0;
+        }
+
+        .job-card .button:hover {
+            background: #0878d1;
+        }
+
+        /* START JOURNEY SECTION */
+
+        main section:last-child {
+            text-align: center;
+        }
+
+        main section:last-child p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+            color: #4c6880;
+        }
+
+        main section:last-child .button {
+            background: #07529a;
+            color: white;
+        }
+
+        main section:last-child .button:hover {
+            background: #0878d1;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #082f55;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            main section:not(.hero) {
+                padding: 25px;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<header>
-    <body style="background-color: grey;"></body>
-    <img src="images/LOGO.png " width="300px" height="500px">
-    <h1>Tech Jobs Connect</h1>
+    <!-- HEADER -->
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="job-listings.html">Jobs</a>
-        <a href="search-filter.html">Search Jobs</a>
-        <a href="career-tips.html">Career Tips</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="faq.html">FAQ</a>
-    </nav>
-</header>
+    <header>
 
-<main>
+        <div class="logo">
+            <img src="images/LOGO.png" alt="Tech Jobs Connect Logo">
+        </div>
+
+        <h1>Tech Jobs Connect</h1>
+
+        <nav>
+           <a href="home page.html">Home</a>
+    <a href="job listings.html">Jobs</a>
+    <a href="search and filter.html">Search Jobs</a>
+    <a href="career tips.html">Career Tips</a>
+    <a href="about-us.html" class="active">About Us</a>
+    <a href="form.html">Contact Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="employer registration.html">Employers</a>
+    <a href="job details.html">Job Details</a>
+    <a href="job seeker registration.html">Job Seeker Registration</a>
+            
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
 
     <section class="hero">
+
         <h2>Find Your Next Technology Career</h2>
 
         <p>
@@ -43,97 +312,177 @@
         <a href="job-seeker-registration.html" class="button">
             Create Profile
         </a>
+
     </section>
 
-    <section>
-        <h2>What We Offer</h2>
 
-        <div class="features">
+    <!-- MAIN CONTENT -->
 
-            <div class="feature">
-                <h3>Find Technology Jobs</h3>
-                <p>
-                    Search for software development, IT support,
-                    cybersecurity, web development and other
-                    technology opportunities.
-                </p>
-                <a href="job-listings.html">View Jobs</a>
+    <main>
+
+
+        <!-- WHAT WE OFFER -->
+
+        <section>
+
+            <h2>What We Offer</h2>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <h3>Find Technology Jobs</h3>
+
+                    <p>
+                        Search for software development, IT support,
+                        cybersecurity, web development and other
+                        technology opportunities.
+                    </p>
+
+                    <a href="job-listings.html">
+                        View Jobs
+                    </a>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>Build Your Career</h3>
+
+                    <p>
+                        Get useful advice about CV writing, interviews,
+                        skills development and starting a career in IT.
+                    </p>
+
+                    <a href="career-tips.html">
+                        Career Tips
+                    </a>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>For Employers</h3>
+
+                    <p>
+                        Companies can register and advertise their
+                        available technology positions.
+                    </p>
+
+                    <a href="employer-registration.html">
+                        Register as Employer
+                    </a>
+
+                </div>
+
             </div>
 
-            <div class="feature">
-                <h3>Build Your Career</h3>
-                <p>
-                    Get useful advice about CV writing, interviews,
-                    skills development and starting a career in IT.
-                </p>
-                <a href="career-tips.html">Career Tips</a>
-            </div>
+        </section>
 
-            <div class="feature">
-                <h3>For Employers</h3>
+
+        <!-- FEATURED JOBS -->
+
+        <section>
+
+            <h2>Featured Jobs</h2>
+
+
+            <div class="job-card">
+
+                <h3>Junior Software Developer</h3>
+
                 <p>
-                    Companies can register and advertise their
-                    available technology positions.
+                    <strong>Company:</strong> Tech Solutions SA
                 </p>
-                <a href="employer-registration.html">
-                    Register as Employer
+
+                <p>
+                    <strong>Location:</strong> Johannesburg |
+                    <strong>Type:</strong> Full Time
+                </p>
+
+                <a href="job-details.html" class="button">
+                    View Job
                 </a>
+
             </div>
 
-        </div>
-    </section>
 
-    <section>
-        <h2>Featured Jobs</h2>
+            <div class="job-card">
 
-        <div class="job-card">
-            <h3>Junior Software Developer</h3>
-            <p>Tech Solutions SA</p>
-            <p>Johannesburg | Full Time</p>
-            <a href="job-details.html" class="button">
-                View Job
+                <h3>IT Support Technician</h3>
+
+                <p>
+                    <strong>Company:</strong> Digital Systems
+                </p>
+
+                <p>
+                    <strong>Location:</strong> Cape Town |
+                    <strong>Type:</strong> Full Time
+                </p>
+
+                <a href="job-details.html" class="button">
+                    View Job
+                </a>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <h3>Web Developer</h3>
+
+                <p>
+                    <strong>Company:</strong> WebTech Africa
+                </p>
+
+                <p>
+                    <strong>Location:</strong> Pretoria |
+                    <strong>Type:</strong> Contract
+                </p>
+
+                <a href="job-details.html" class="button">
+                    View Job
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- START YOUR JOURNEY -->
+
+        <section>
+
+            <h2>Start Your Journey Today</h2>
+
+            <p>
+                Whether you are looking for your first IT job,
+                developing your skills or hiring technology talent,
+                Tech Jobs Connect is here to help.
+            </p>
+
+            <a href="job-seeker-registration.html" class="button">
+                Get Started
             </a>
-        </div>
 
-        <div class="job-card">
-            <h3>IT Support Technician</h3>
-            <p>Digital Systems</p>
-            <p>Cape Town | Full Time</p>
-            <a href="job-details.html" class="button">
-                View Job
-            </a>
-        </div>
+        </section>
 
-        <div class="job-card">
-            <h3>Web Developer</h3>
-            <p>WebTech Africa</p>
-            <p>Pretoria | Contract</p>
-            <a href="job-details.html" class="button">
-                View Job
-            </a>
-        </div>
 
-    </section>
+    </main>
 
-    <section>
-        <h2>Start Your Journey Today</h2>
+
+    <!-- FOOTER -->
+
+    <footer>
 
         <p>
-            Whether you are looking for your first IT job,
-            developing your skills or hiring technology talent,
-            Tech Jobs Connect is here to help.
+            &copy; 2026 Tech Jobs Connect. All Rights Reserved.
         </p>
 
-        <a href="job-seeker-registration.html" class="button">
-            Get Started
-        </a>
-    </section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Tech Jobs Connect. All Rights Reserved.</p>
-</footer>
+    </footer>
 
 </body>
+
 </html>

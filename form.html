@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Job Seeker Registration - Tech Jobs Connect</title>
+    <title>Tech Jobs Connect - Application Form</title>
 
     <style>
 
@@ -39,12 +37,6 @@
             width: 150px;
             height: auto;
             display: block;
-        }
-
-        header h1 {
-            color: #07529a;
-            margin: 0;
-            font-size: 28px;
         }
 
         /* NAVIGATION */
@@ -79,7 +71,7 @@
             background: linear-gradient(135deg, #07529a, #0878d1);
         }
 
-        .hero h2 {
+        .hero h1 {
             font-size: 42px;
             margin: 0 0 15px;
         }
@@ -120,11 +112,20 @@
             margin-bottom: 30px;
         }
 
-        /* FORM */
+        /* FORM ROWS */
+
+        .row {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
 
         .form-group {
-            margin-bottom: 22px;
+            flex: 1;
+            margin-bottom: 20px;
         }
+
+        /* LABELS */
 
         label {
             display: block;
@@ -132,6 +133,8 @@
             margin-bottom: 8px;
             color: #173b63;
         }
+
+        /* INPUTS */
 
         input,
         textarea {
@@ -152,7 +155,6 @@
         }
 
         textarea {
-            min-height: 120px;
             resize: vertical;
         }
 
@@ -181,7 +183,7 @@
             font-size: 17px;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         button:hover {
@@ -197,8 +199,12 @@
             padding: 30px;
         }
 
+        footer h3 {
+            margin-top: 0;
+        }
+
         footer p {
-            margin: 0;
+            margin: 8px 0;
         }
 
         /* MOBILE */
@@ -214,7 +220,7 @@
                 justify-content: center;
             }
 
-            .hero h2 {
+            .hero h1 {
                 font-size: 32px;
             }
 
@@ -222,6 +228,10 @@
                 padding: 25px;
             }
 
+            .row {
+                flex-direction: column;
+                gap: 0;
+            }
         }
 
     </style>
@@ -230,22 +240,16 @@
 
 <body>
 
-
     <!-- HEADER -->
 
     <header>
 
         <div class="logo">
-
-            <img src="images/LOGO.png"
-                 alt="Tech Jobs Connect Logo">
-
+            <img src="images/LOGO.png" alt="Tech Jobs Connect Logo">
         </div>
 
-        <h1>Tech Jobs Connect</h1>
-
         <nav>
-          <a href="home page.html">Home</a>
+             <a href="home page.html">Home</a>
     <a href="job listings.html">Jobs</a>
     <a href="search and filter.html">Search Jobs</a>
     <a href="career tips.html">Career Tips</a>
@@ -256,125 +260,150 @@
     <a href="employer registration.html">Employers</a>
     <a href="job details.html">Job Details</a>
     <a href="job seeker registration.html">Job Seeker Registration</a>
-        </nav>
+
+        </nav>S
 
     </header>
 
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
 
     <section class="hero">
 
-        <h2>Job Seeker Registration</h2>
+        <h1>Start Your Tech Career</h1>
 
         <p>
-            Create your profile and start finding your next technology opportunity.
+            Apply for your next technology opportunity today.
         </p>
 
     </section>
 
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
 
     <main>
 
         <div class="form-container">
 
-            <h2>Create Your Job Seeker Account</h2>
+            <h2>Job Application Form</h2>
 
             <p class="intro">
-                Complete the form below to create your profile.
+                Please complete the form below and upload your CV.
             </p>
 
 
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form>
 
 
-                <!-- FULL NAME -->
+                <!-- NAME AND EMAIL -->
 
-                <div class="form-group">
+                <div class="row">
 
-                    <label for="fullname">
-                        Full Name
-                    </label>
+                    <div class="form-group">
 
-                    <input
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        placeholder="Enter your full name"
-                        required>
+                        <label for="fullname">
+                            Full Name
+                        </label>
 
-                </div>
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            required>
 
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        required>
-
-                </div>
+                    </div>
 
 
-                <!-- PHONE -->
+                    <div class="form-group">
 
-                <div class="form-group">
+                        <label for="email">
+                            Email Address
+                        </label>
 
-                    <label for="phone">
-                        Phone Number
-                    </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required>
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                        required>
+                    </div>
 
                 </div>
 
 
-                <!-- PASSWORD -->
+                <!-- PHONE AND POSITION -->
 
-                <div class="form-group">
+                <div class="row">
 
-                    <label for="password">
-                        Password
-                    </label>
+                    <div class="form-group">
 
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Create a password"
-                        required>
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="position">
+                            Position Applying For
+                        </label>
+
+                        <input
+                            type="text"
+                            id="position"
+                            name="position"
+                            placeholder="Enter the position"
+                            required>
+
+                    </div>
 
                 </div>
 
 
-                <!-- QUALIFICATION -->
+                <!-- EXPERIENCE AND QUALIFICATION -->
 
-                <div class="form-group">
+                <div class="row">
 
-                    <label for="qualification">
-                        Highest Qualification
-                    </label>
+                    <div class="form-group">
 
-                    <input
-                        type="text"
-                        id="qualification"
-                        name="qualification"
-                        placeholder="e.g. Diploma in Information Technology">
+                        <label for="experience">
+                            Years of Experience
+                        </label>
+
+                        <input
+                            type="number"
+                            id="experience"
+                            name="experience"
+                            placeholder="e.g. 2"
+                            min="0">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="qualification">
+                            Highest Qualification
+                        </label>
+
+                        <input
+                            type="text"
+                            id="qualification"
+                            name="qualification"
+                            placeholder="e.g. Diploma in Software Development">
+
+                    </div>
 
                 </div>
 
@@ -390,6 +419,7 @@
                     <textarea
                         id="skills"
                         name="skills"
+                        rows="5"
                         placeholder="List your technical skills"></textarea>
 
                 </div>
@@ -400,14 +430,15 @@
                 <div class="form-group">
 
                     <label for="cv">
-                        Upload CV
+                        Upload Your CV
                     </label>
 
                     <input
                         type="file"
                         id="cv"
                         name="cv"
-                        accept=".pdf,.doc,.docx">
+                        accept=".pdf,.doc,.docx"
+                        required>
 
                     <small>
                         Accepted formats: PDF, DOC and DOCX
@@ -419,8 +450,9 @@
                 <!-- SUBMIT -->
 
                 <button type="submit">
-                    Create Account
+                    Submit Application
                 </button>
+
 
             </form>
 
@@ -433,12 +465,17 @@
 
     <footer>
 
+        <h3>Tech Jobs Connect</h3>
+
+        <p>
+            Connecting talented people with technology opportunities.
+        </p>
+
         <p>
             &copy; 2026 Tech Jobs Connect. All Rights Reserved.
         </p>
 
     </footer>
-
 
 </body>
 
